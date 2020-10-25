@@ -20,5 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/frontend', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend');
 Route::get('/backend', [App\Http\Controllers\Backend\BackendController::class, 'index'])->name('backend');
+
+Route::get('/logout', [App\Http\Controllers\LogoutController::class, 'index'])->name('logout');
+
+// Route::get('/logout', function(){
+//    Auth::logout();
+//    return Redirect::to('login');
+// });
