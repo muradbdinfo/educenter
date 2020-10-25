@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class BackendController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -19,6 +19,6 @@ class BackendController extends Controller
      */
     public function index()
     {
-        return view('backend.layouts.home');
+        return view('backend.layouts.master');
     }
 }
