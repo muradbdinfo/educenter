@@ -85,3 +85,29 @@ Route::get('/delete_contact/{id}', [App\Http\Controllers\Backend\ContactControll
 // Route::get('/details_contact/{id}', 'Admin\ContactController@DetailsContact');
 
 // End Contact Management
+
+
+
+// Event Management
+
+//backend 
+
+
+
+Route::get('/list_event', [App\Http\Controllers\Backend\EventController::class,'EventList'])->name('list_event');
+Route::get('/add_event', [App\Http\Controllers\Backend\EventController::class,'EventAdd']);
+
+Route::post('/insert_event', [App\Http\Controllers\Backend\EventController::class,'EventInsert']);
+
+Route::post('/update_event/{id}', [App\Http\Controllers\Backend\EventController::class,'UpdateEvent']);
+
+Route::get('/edit_event/{id}', [App\Http\Controllers\Backend\EventController::class,'EditEvent']);
+
+Route::get('/delete_event/{id}', [App\Http\Controllers\Backend\EventController::class,'DeleteEvent']);
+
+
+//Frontend
+
+// Route::get('/details_event/{id}', 'Admin\EventController@DetailsEvent');
+
+// End Event Management
