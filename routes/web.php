@@ -26,7 +26,14 @@ Route::get('/backend', [App\Http\Controllers\Backend\BackendController::class, '
 
 Route::get('/logout', [App\Http\Controllers\LogoutController::class, 'index'])->name('logout');
 
-// Route::get('/logout', function(){
-//    Auth::logout();
-//    return Redirect::to('login');
-// });
+
+// ACL  Start
+
+Route::get('/userlist1', [App\Http\Controllers\Backend\ACL\AclController::class, 'UserList_byAdmin'])->name('userlist1');
+Route::get('/userlist2', [App\Http\Controllers\Backend\ACL\AclController::class, 'UserList_byManager'])->name('userlist2');
+Route::get('/useredit/{id}', [App\Http\Controllers\Backend\ACL\AclController::class, 'UserEdit'])->name('useredit');
+Route::post('/userupdate', [App\Http\Controllers\Backend\ACL\AclController::class, 'UpdateUser'])->name('userupdate');
+
+Route::get('/userdelete/{id}', [App\Http\Controllers\Backend\ACL\AclController::class, 'UserDelete'])->name('userdelete');
+
+

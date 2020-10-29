@@ -4,12 +4,11 @@
   </aside>
   <!-- /.control-sidebar -->
 
-
- <!-- Main Footer -->
+  <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2016-2020 <a href="http://easyit.com.bd">EasyIT&trade;</a>.</strong>
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0
+      <b>Version</b> 3.0.5
     </div>
   </footer>

@@ -1,26 +1,37 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.app')
 @section('content')
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-  
-
-    <!-- Main content -->
-    <div class="content">
+<section class="content">
       <div class="container-fluid">
-   
-      @if (session('status'))
+
+
+
+      <div class="row ">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    You are logged in!
                 </div>
+            </div>
+        </div>
 
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+
+
+   
+
+
+</div>
+
+     
+    </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
