@@ -37,3 +37,51 @@ Route::post('/userupdate', [App\Http\Controllers\Backend\ACL\AclController::clas
 Route::get('/userdelete/{id}', [App\Http\Controllers\Backend\ACL\AclController::class, 'UserDelete'])->name('userdelete');
 
 
+
+
+// Notice Management
+
+//backend 
+
+Route::get('/list_notice', [App\Http\Controllers\Backend\NoticeController::class,'NoticeList'])->name('list_notice');
+
+Route::get('/add_notice', [App\Http\Controllers\Backend\NoticeController::class,'NoticeAdd'])->name('add_notice');
+Route::post('/insert_notice', [App\Http\Controllers\Backend\NoticeController::class,'NoticeInsert']);
+Route::get('/edit_notice/{id}', [App\Http\Controllers\Backend\NoticeController::class,'EditNotice']);
+
+Route::post('/update_notice/{id}', [App\Http\Controllers\Backend\NoticeController::class,'UpdateNotice']);
+
+Route::get('/delete_notice/{id}', [App\Http\Controllers\Backend\NoticeController::class,'DeleteNotice']);
+
+
+//Frontend
+
+// Route::get('/details_notice/{id}', 'Admin\NoticeController@DetailsNotice');
+
+// End Notice Management
+
+
+
+// Contact 
+
+Route::get('/list_contact', [App\Http\Controllers\Backend\ContactController::class,'ContactList'])->name('list_contact');
+
+Route::get('/add_contact', [App\Http\Controllers\Backend\ContactController::class,'ContactAdd']);
+
+Route::post('/insert_contact', [App\Http\Controllers\Backend\ContactController::class,'ContactInsert']);
+
+Route::get('/edit_contact/{id}', [App\Http\Controllers\Backend\ContactController::class,'EditContact']);
+
+Route::post('/update_contact/{id}', [App\Http\Controllers\Backend\ContactController::class,'UpdateContact']);
+
+Route::get('/delete_contact/{id}', [App\Http\Controllers\Backend\ContactController::class,'DeleteContact']);
+
+
+//Frontend
+
+// Route::post('/insert_contact_frontpage', 'Admin\ContactController@ContactInsert_Frontpage');
+
+
+// Route::get('/details_contact/{id}', 'Admin\ContactController@DetailsContact');
+
+// End Contact Management

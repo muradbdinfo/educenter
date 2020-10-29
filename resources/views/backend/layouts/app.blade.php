@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="{{asset('public/backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('public/backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <!-- Theme style -->
-
+<!-- summernote -->
+<link rel="stylesheet" href="{{asset('public/backend/plugins/summernote/summernote-bs4.css')}}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{asset('public/backend/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
   <!-- Theme style -->
@@ -79,6 +80,14 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="{{asset('public/backend/dist/js/pages/dashboard2.js')}}"></script>
+<script src="{{asset('public/backend/plugins/summernote/summernote-bs4.min.js')}}"></script>
+
+<script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
+</script>
 
 <script>
   $(function () {

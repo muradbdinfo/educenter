@@ -44,11 +44,65 @@ ACL
 </li>
 
 </ul>
-</li>       
+</li>  
+
+
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-copy"></i>
+<p>
+Notice
+<i class="fas fa-angle-left right"></i>
+
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{URL::to('/list_notice')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p> Notice List</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="{{URL::to('/add_notice')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p> Add</p>
+</a>
+</li>
+
+</ul>
+</li> 
+
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-copy"></i>
+<p>
+Contact
+<i class="fas fa-angle-left right"></i>
+
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{URL::to('/list_contact')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>  List</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="{{URL::to('/add_contact')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p> Add</p>
+</a>
+</li>
+
+</ul>
+</li> 
 
 @else
   @endif
 
+ 
 
 
 <li class="nav-item">
@@ -59,7 +113,7 @@ ACL
 </li>
 
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -534,7 +588,7 @@ ACL
               <i class="fas fa-circle nav-icon"></i>
               <p>Level 1</p>
             </a>
-          </li>
+          </li> -->
 
       
         </ul>
