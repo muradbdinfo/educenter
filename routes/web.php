@@ -164,3 +164,25 @@ Route::get('/delete_post/{id}', [App\Http\Controllers\Backend\PostController::cl
 
 
 // End Post Management
+
+
+
+// Logo Management
+
+//backend 
+
+Route::get('/list_logo', [App\Http\Controllers\Backend\SettingsController::class,'LogoList'])->name('list_logo');
+Route::get('/add_logo', [App\Http\Controllers\Backend\SettingsController::class,'LogoAdd'])->name('add_logo');
+Route::post('/insert_logo', [App\Http\Controllers\Backend\SettingsController::class,'LogoInsert']);
+Route::get('/edit_logo/{id}', [App\Http\Controllers\Backend\SettingsController::class,'EditLogo']);
+
+Route::post('/update_logo/{id}', [App\Http\Controllers\Backend\SettingsController::class,'UpdateLogo']);
+
+Route::get('/delete_logo/{id}', [App\Http\Controllers\Backend\SettingsController::class,'DeleteLogo']);
+
+
+//Frontend
+
+// Route::get('/details_notice/{id}', 'Admin\NoticeController@DetailsNotice');
+
+// End Logo Management
