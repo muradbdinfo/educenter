@@ -111,3 +111,16 @@ Route::get('/delete_event/{id}', [App\Http\Controllers\Backend\EventController::
 // Route::get('/details_event/{id}', 'Admin\EventController@DetailsEvent');
 
 // End Event Management
+
+
+
+// Start Slider
+
+Route::get('list_slider', [App\Http\Controllers\Backend\SliderController::class,'ListSlider'])->name('list_slider');
+Route::get('/add_slider',[App\Http\Controllers\Backend\SliderController::class,'AddSlider']);
+Route::post('/insert_slider', [App\Http\Controllers\Backend\SliderController::class,'InsertSlider']);
+Route::post('/update_slider/{id}', [App\Http\Controllers\Backend\SliderController::class,'UpdateSlider']);
+Route::get('/edit_slider/{id}', [App\Http\Controllers\Backend\SliderController::class,'EditSlider']);
+Route::get('/delete_slider/{id}', [App\Http\Controllers\Backend\SliderController::class,'DeleteSlider']);
+
+// End Slider

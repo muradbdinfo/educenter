@@ -6,9 +6,9 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2020 <a href="http://easyit.com.bd" target="_blank">EasyIT&trade;</a>.</strong>
+    All rights reserved by Easy IT
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.5
+      <b>Version</b> 2.0
     </div>
   </footer>

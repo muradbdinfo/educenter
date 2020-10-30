@@ -45,27 +45,31 @@ class AclController extends Controller
          return view('backend.acl.edit',compact('user'));
     }
 
-    public function UpdateUser(Request $request)
-    {
-         $id=$request->id;
-         $data=array();
-         $data['name']=$request->name;
-         $data['type']=$request->type;
-         $data['status']=$request->status;
-        //  $data['password']=trim(Hash::make($request->password));
+    // public function UpdateUser(Request $request)
+    // {
+    //      $id=$request->id;
+    //      $data=array();
+    //      $data['name']=$request->name;
+    //      $data['type']=$request->type;
+    //      $data['status']=$request->status;
+    //     //  $data['password']=trim(Hash::make($request->password));
          
          
-         DB::table('users')->where('id',$id)->update($data);
-         $notification=array(
-                 'messege'=>'Update Successfully',
-                 'alert-type'=>'success'
-                       );
-        return Redirect()->route('userlist1')->with($notification);
+    //      DB::table('users')->where('id',$id)->update($data);
+    //      $notification=array(
+    //              'messege'=>'Update Successfully',
+    //              'alert-type'=>'success'
+    //                    );
+    //     return Redirect()->route('userlist1')->with($notification);
 
 
-    }
+    // }
 
 
+
+
+
+    
 
 
 
