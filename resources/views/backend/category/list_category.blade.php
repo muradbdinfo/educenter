@@ -14,8 +14,7 @@
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
-                  <th>Date</th>
-                  <th> Pictures</th>
+                  
                   <th>Action</th>
                   
                 </tr>
@@ -25,14 +24,12 @@
 <tr>
 <td>{{ $row->id }}</td>
 <td>{{ $row->name }}</td>
-<td>{{ $row->date }}</td>
-<td><img src="{{ $row->pictures }}" style="height: 60px; width: 60px;">
-</td>
+
 
 <td>
- <a href="{{ URL::to('/edit_post/'.$row->id) }}" class="btn btn-sm btn-info">Edit</a>
-<a href="{{ URL::to('delete_post/'.$row->id) }}" class="btn btn-sm btn-danger" id="delete" class="middle-align">Delete</a>
-<a href="{{ URL::to('view_post/'.$row->id) }}" class="btn btn-sm btn-primary">View</a>
+ <a href="{{ URL::to('/edit_category/'.$row->id) }}" class="btn btn-sm btn-info">Edit</a>
+<a href="{{ URL::to('delete_category/'.$row->id) }}" class="btn btn-sm btn-danger" id="delete" class="middle-align">Delete</a>
+<a href="{{ URL::to('view_category/'.$row->id) }}" class="btn btn-sm btn-primary">View</a>
 </td>
 </tr>
                  @endforeach
@@ -42,8 +39,7 @@
 <tr>
 <th>ID</th>
 <th>Name</th>
-<th>Date</th>
-<th>Pictures</th>
+
 <th>Action</th>
 </tr>
                 </tfoot>

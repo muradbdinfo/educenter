@@ -124,3 +124,43 @@ Route::get('/edit_slider/{id}', [App\Http\Controllers\Backend\SliderController::
 Route::get('/delete_slider/{id}', [App\Http\Controllers\Backend\SliderController::class,'DeleteSlider']);
 
 // End Slider
+
+
+
+// Category Management
+
+//backend 
+
+
+Route::get('list_category', [App\Http\Controllers\Backend\CategoryController::class,'CategoryList'])->name('list_category');
+ Route::get('/add_category',[App\Http\Controllers\Backend\CategoryController::class,'CategoryAdd']);
+Route::post('/insert_category', [App\Http\Controllers\Backend\CategoryController::class,'CategoryInsert']);
+ Route::get('/edit_category/{id}', [App\Http\Controllers\Backend\CategoryController::class,'EditCategory']);
+Route::post('/update_category/{id}', [App\Http\Controllers\Backend\CategoryController::class,'UpdateCategory']);
+Route::get('/delete_category/{id}', [App\Http\Controllers\Backend\CategoryController::class,'DeleteCategory']);
+
+
+
+//Frontend
+
+
+// End Category Management
+
+
+// Post Management
+
+//backend 
+
+
+Route::get('list_post', [App\Http\Controllers\Backend\PostController::class,'PostList'])->name('list_post');
+Route::get('/add_post',[App\Http\Controllers\Backend\PostController::class,'PostAdd']);
+Route::post('/insert_post', [App\Http\Controllers\Backend\PostController::class,'PostInsert']);
+Route::get('/edit_post/{id}', [App\Http\Controllers\Backend\PostController::class,'EditPost']);
+Route::post('/update_post/{id}', [App\Http\Controllers\Backend\PostController::class,'UpdatePost']);
+Route::get('/delete_post/{id}', [App\Http\Controllers\Backend\PostController::class,'DeletePost']);
+
+
+//Frontend
+
+
+// End Post Management

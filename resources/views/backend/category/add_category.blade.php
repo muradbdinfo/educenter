@@ -11,11 +11,11 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add POST</h3>
+                <h3 class="card-title">Add Category</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="{{URL::to('/insert_post')}}" method="post" enctype="multipart/form-data">
+              <form role="form" action="{{URL::to('/insert_category')}}" method="post" enctype="multipart/form-data">
               	@csrf
                 <div class="card-body">
 
@@ -33,62 +33,12 @@
 
 
 
-<div class="form-group">
-<label for="exampleInputEmail1">Category</label>
-
-
-@php
-$designation=DB::table('categoris')
-->select('categoris.*')
-->get();
-@endphp
-             <select class="form-control" id="exampleFormControlSelect1" name="categori_id" required>
-               
-  @foreach($designation as $row)
-  <option value="{{$row->id}}" required>
-  
-  {{$row->name}} 
-  </option>
-  @endforeach
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-<label for="exampleInputEmail1">Author</label>
-<input type="text" name="author_id"  value="{{ Auth::user()->id }}" class="form-control @error('author_id') is-invalid @enderror" id="exampleInputEmail1" readonly>
-
-@error('author_id')
-<span class="invalid-feedback" role="alert">
-<strong>{{ $message }}</strong>
-</span>
-@enderror
-</div>
 
 
 
 
 
 
-
-
-<div class="form-group">
-<label for="exampleInputPassword1">Details</label>      
-
-<textarea class="textarea" name="details"  placeholder="Place some text here"
-style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">  </textarea>
-</div>
-
-
-<div class="form-group">
-  <label for="exampleInputEmail1">Pictures</label><br>
-
-<img id="image" src="#" />
-
-<input type="file"  name="pictures" accept="image/*"   onchange="readURL(this);">
-</div>
 
 
                  
